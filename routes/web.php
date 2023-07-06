@@ -22,7 +22,6 @@ Route::get('/getCache', [ProdutosController::class, 'getCache']);
 Route::get('/forgetCache', [ProdutosController::class, 'forgetCache']);
 Route::get('/putCache', [ProdutosController::class, 'putCache']);
 Route::get('/hasCache', [ProdutosController::class, 'hasCache']);
-Route::get('/addCache', [ProdutosController::class, 'addCache']);
 Route::get('/flushCache', [ProdutosController::class, 'flushCache']);
 Route::get('/tagsCache', [ProdutosController::class, 'tagsCache']);
 Route::get('/getTagsCache', [ProdutosController::class, 'getTagsCache']);

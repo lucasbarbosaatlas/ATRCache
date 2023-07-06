@@ -133,6 +133,9 @@ class ProdutosController extends Controller
         return $tag;
     }
 
+
+    // TAGS
+
     /**
      * Undocumented function
      *
@@ -140,7 +143,8 @@ class ProdutosController extends Controller
      */
     public function getTagsCache()
     {
-        $tags = Cache::tags('produtoscategorias')->get('allprodutos');
+        $tagCache = config('cache.objects.tags.products');
+        $tags = Cache::tags($tagCache)->get('allprodutos');
         return $tags;
     }
 
@@ -171,7 +175,8 @@ class ProdutosController extends Controller
      */
     public function flushTagsCache()
     {
-        Cache::tags('products')->flush();
+        $tagCache = config('cache.objects.tags.products');
+        Cache::tags($tagCache)->flush();
     }
 
     /**
